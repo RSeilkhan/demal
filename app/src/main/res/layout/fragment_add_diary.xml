@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddDiaryFragment"
+    android:background="@color/white"
+    android:id="@+id/container">
+
+    <include
+        android:id="@+id/add_notes_bar"
+        layout="@layout/app_bar_layout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="?actionBarSize"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_notes_bar"
+        android:id="@+id/date_layout"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:gravity="bottom"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:id="@+id/add_diary_day"
+            android:layout_marginEnd="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:id="@+id/add_diary_month"
+            android:layout_marginEnd="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:id="@+id/add_diary_week_day"
+            android:layout_marginEnd="5dp"
+            />
+
+    </LinearLayout>
+
+    <com.rakhatali.demal.utils.LinedEditText
+        android:id="@+id/add_notes_title"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:maxLines="1"
+        android:textColor="@color/textColor"
+        android:textCursorDrawable="@color/textColor"
+        android:hint="@string/title"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/date_layout"
+    />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/emoji_image_checker"
+        android:src="@drawable/ic_emoji_happy"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/add_notes_title"
+        android:layout_below="@id/date_layout"
+
+        />
+
+    <com.rakhatali.demal.utils.LinedEditText
+        android:id="@+id/add_notes_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/textColor"
+        android:layout_below="@id/add_notes_title"
+        android:layout_above="@id/recycler_view_emoji"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="2000"
+        android:gravity="top"
+        android:scrollbars="none"
+        android:background="@android:color/transparent"
+        android:hint="@string/content"
+        android:paddingTop="3dp"
+        android:textSize="20sp"
+ />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_emoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/coordinatorLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        />
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/colorAccent"
+            app:buttonGravity="bottom|top"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:fabAlignmentMode="end" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/bottomAppBar"
+            app:srcCompat="@drawable/ic_save_black_24dp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightBlue"
+    tools:context=".fragments.ChangePassFragment">
+
+    <ImageButton
+        style="@style/BackArrow"
+        android:id="@+id/back_btn"
+        />
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="60dp"
+        android:isScrollContainer="false"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Custom.Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:hint="@string/current_password"
+                android:inputType="textPassword"
+                android:id="@+id/current_pass"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Custom.Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:hint="@string/new_password"
+                android:inputType="textPassword"
+                android:id="@+id/new_pass"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Custom.Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:id="@+id/confirm_pass"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:text="@string/confirm"
+            android:id="@+id/confirm_btn"
+            android:layout_marginTop="23dp"
+            style="@style/MainButtons"
+            />
+
+
+    </LinearLayout>
+
+</FrameLayout>

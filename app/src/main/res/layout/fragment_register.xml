@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RegisterFragment"
+    android:background="@mipmap/island_back"
+
+    android:id="@+id/container">
+
+    <ImageButton
+        style="@style/BackArrow"
+        android:id="@+id/back_for_main"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/welcome"
+        android:layout_marginTop="130dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:text="@string/registration"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="60dp"
+        android:isScrollContainer="false"
+        android:orientation="vertical"
+        android:layout_below="@+id/welcome"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Custom.Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:hint="@string/user_name"
+                android:inputType="textPersonName"
+                android:id="@+id/userName"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Custom.Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:id="@+id/email"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Custom.Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:id="@+id/password"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:text="@string/register"
+            android:id="@+id/register_btn"
+            android:layout_marginTop="23dp"
+            style="@style/MainButtons"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_account"
+            android:textColor="@color/white"
+            android:id="@+id/to_login"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"/>
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/form"
+        android:text="@string/agree_terms"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.DiaryFragment"
+    android:background="@color/lightBlue"
+    >
+
+    <ImageButton
+        style="@style/BackArrow"
+        android:id="@+id/diary_back_btn"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view_diary"
+        android:layout_below="@id/diary_back_btn"
+        android:layout_marginTop="30dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_diary_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:src="@drawable/ic_save_black_24dp"
+        app:fabSize="normal"
+        android:accessibilityTraversalBefore="@id/recycler_view_diary"
+        android:clickable="true"
+        app:backgroundTint="@color/blue"
+        app:tint="@android:color/white"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:focusable="true" />
+    
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/emoji_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_emoji_angry" />
+
+        <TextView
+            android:id="@+id/emoji_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignStart="@id/emoji_image"
+            android:layout_alignEnd="@id/emoji_image"
+            android:layout_below="@id/emoji_image"
+            android:layout_marginTop="30dp"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textColor="@color/textColor" />
+
+</RelativeLayout>

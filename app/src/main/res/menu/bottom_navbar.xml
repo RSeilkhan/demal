@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title=""
+        />
+    <item
+        android:id="@+id/nav_sleep"
+        android:icon="@drawable/ic_outline_nights_stay_24"
+        android:title=""
+        />
+    <item
+        android:id="@+id/nav_meditate"
+        android:icon="@drawable/ic_yoga"
+        android:title=""
+        />
+    <item
+        android:id="@+id/nav_music"
+        android:icon="@drawable/ic_outline_library_music_24"
+        android:title=""
+        />
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_baseline_more_horiz_24"
+        android:title=""
+        />
+
+</menu>

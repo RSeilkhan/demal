@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/blueLighter"
+    android:layout_marginTop="5dp"
+    android:id="@+id/parent">
+
+    <include
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:id="@+id/include_date"
+        layout="@layout/date_item"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tittle"
+        android:layout_toEndOf="@id/include_date"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tittle"
+        android:layout_toEndOf="@id/include_date"
+        android:layout_toStartOf="@+id/image_diary"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/image_diary"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_love_music"/>
+
+
+
+</RelativeLayout>

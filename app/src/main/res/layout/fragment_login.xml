@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LoginFragment"
+    android:background="@mipmap/island_back"
+
+    android:id="@+id/container">
+
+    <ImageButton
+        style="@style/BackArrow"
+        android:id="@+id/back_for_main"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_back"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/welcome"
+        android:layout_marginTop="130dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:text="@string/log_into_acc"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="60dp"
+        android:isScrollContainer="false"
+        android:orientation="vertical"
+        android:layout_below="@+id/welcome"
+        android:padding="20dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Custom.Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:id="@+id/email"
+                android:textCursorDrawable="@color/lightGray"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Custom.Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@color/lightGray"
+                android:id="@+id/password"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            style="@style/MainButtons"
+            android:text="@string/login"
+            android:id="@+id/login_btn_frag"
+            android:layout_marginTop="23dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forget_password"
+            android:id="@+id/reset_password"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dont_have_account"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:id="@+id/to_regist"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MoreFragment"
+    android:background="@color/lightBlue"
+    android:clipToPadding="false"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineProvider="bounds"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/not_logged_linear"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_below="@+id/email_linear"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="90dp"
+            android:layout_centerHorizontal="true"
+            android:padding="25dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/image_rounded"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/textColor"
+                android:text="@string/didnt_logged"
+                />
+
+            <Button
+                style="@style/MainButtons"
+                android:layout_width="wrap_content"
+                android:id="@+id/openWelcome"
+                app:backgroundTint="@color/blue"
+                android:text="@string/ok"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_linear"
+            android:visibility="visible"
+            android:layout_below="@id/profileImage"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_email_not_verified"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/require_verify_email"
+                android:layout_marginTop="6dp"
+                android:id="@+id/email_verify"
+                android:textSize="12sp"
+                android:elevation="2dp"
+                android:stateListAnimator="@null"
+                android:textColor="@android:color/holo_red_dark"
+                app:backgroundTint="@color/white"
+                android:background="@drawable/main_btns"
+                />
+
+        </LinearLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_height="80dp"
+            android:layout_width="80dp"
+            android:id="@+id/profileImage"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:visibility="visible"
+            android:src="@mipmap/island_back"
+
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userName"
+            android:visibility="visible"
+            android:layout_toEndOf="@+id/profileImage"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <ImageButton
+            android:id="@+id/settingsBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+
+            android:background="@drawable/ic_settings" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/countNumbers"
+            android:orientation="horizontal"
+            android:layout_below="@+id/email_linear"
+            android:layout_marginTop="20dp"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="25dp"
+            android:paddingHorizontal="20dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/image_rounded"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_listening"
+                    />
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/listened_audio_count"
+                    android:textColor="@color/darkGrayLighter"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="3dp"
+                    />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listenedTimeNumber"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_back_in_time"
+                    />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/listened_time_count"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGrayLighter"
+                    android:layout_margin="3dp"
+                    />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listenedTimeMinute"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_calendar"
+                    />
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/days_with_us"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGrayLighter"
+                    android:layout_margin="3dp"
+                    />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/daysRegist"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/countNumbers"
+            android:layout_marginTop="30dp"
+            android:elevation="7dp"
+            android:visibility="visible"
+            android:id="@+id/list_gyms"
+            android:showDividers="middle"
+            android:clipToPadding="false"
+            android:divider="@drawable/empty_tall_divider"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:divider="@drawable/empty_tall_divider"
+                >
+
+                <Button
+                    android:id="@+id/breathing_btn"
+                    android:text="@string/breathing_gym"
+                    app:elevation="10dp"
+                    app:icon="@drawable/ic_breath_color"
+                    style="@style/MoreButtons"
+                    />
+
+                <Button
+                    android:id="@+id/diary_btn"
+                    android:text="@string/own_diary"
+                    app:icon="@drawable/ic_breath_color"
+                    style="@style/MoreButtons"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

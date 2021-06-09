@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/lightBlue"
+    tools:context=".EditProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:layout_margin="10dp"
+            android:background="@color/transparent"
+            android:id="@+id/close"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm"
+            android:id="@+id/save"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/blueLighter"
+            android:padding="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/island_back"
+            android:id="@+id/image_profile"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:src="@drawable/ic_edit"
+            android:id="@+id/edit"
+            android:layout_toEndOf="@+id/image_profile"
+            android:layout_marginStart="-30dp"
+            android:layout_marginTop="10dp"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_avatar"
+        android:layout_gravity="center"
+        android:id="@+id/tv_change"
+        android:padding="6dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name"
+        android:hint="@string/user_name"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorHighlight="@color/white"
+        app:met_textColor="@color/white"
+        app:met_textColorHint="@color/white"
+        app:met_underlineColor="@color/white"
+        app:met_floatingLabel="normal"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:hint="@string/email"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorHighlight="@color/white"
+        app:met_textColor="@color/white"
+        app:met_textColorHint="@color/white"
+        app:met_underlineColor="@color/white"
+        app:met_floatingLabel="normal"/>
+
+
+</LinearLayout>
